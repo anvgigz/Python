@@ -27,10 +27,23 @@ high_fence = q3 + 1.5 * iqr
 
 print(f'min: {min_}, q1: {q1}, median: {median}, q3: {q3}, max: {max_}, iqr: {iqr}, low_fence: {low_fence}, high_fence: {high_fence}')
 
+#below I am showing work for using the percent function rather than numpy
+# The below code is explicitly used on the w3school website to calculate percentile --https://www.w3schools.com/python/python_ml_percentile.asp
+print("Next code output\n Using Numpy Percentile function\n")
 
-min_, q1, median, q3, max_ = np.percentile(li, [0, 25, 50, 75, 100])
+li = [10, 9, 11, 8, 13, 11, 17, 10, 14, 10, 11]
 
-print(f'min: {min_}, q1: {q1}, median: {median}, q3: {q3}, max: {max_}')
+li_sorted = sorted(li)
+
+min_ = min(li)
+q1 = np.percentile(li, 25)
+median = np.percentile(li, 50)
+q3 = np.percentile(li, 75)
+max_ = max(li)
+iqr = q3 - q1
+low_fence = q1 - 1.5 * iqr
+high_fence = q3 + 1.5 * iqr
+print(f'min: {min_}, q1: {q1}, median: {median}, q3: {q3}, max: {max_}, iqr: {iqr}, low_fence: {low_fence}, high_fence: {high_fence}')
 
 
 
