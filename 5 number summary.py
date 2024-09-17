@@ -7,20 +7,22 @@ li_sorted = sorted(li)
 
 print(li_sorted)
 
+# The if/else statements both divide the data into two subsets, low_subset and high_subset then dividing them by 2 to get both the Q1 and Q3 values
+# the Q3 (high_subset) is recomended to add a 1 in order to keep the start point off the median
 if len(li) % 2 ==0:
-    low_subset = li_sorted[:len(li_sorted)//2]
-    high_subset = li_sorted[len(li) // 2:]
+    low_subset = li_sorted[:len(li_sorted)//2] #q1 if len is even
+    high_subset = li_sorted[len(li) // 2:] #q3 if len is even
 else:
-    low_subset = li_sorted[:len(li) //2]
-    high_subset = li_sorted[(len(li) //2)+1]
+    low_subset = li_sorted[:len(li) //2] #q1 if len is odd
+    high_subset = li_sorted[(len(li) //2)+1] #q3 if len is odd
 
 
 min_ = min(li)
-q1 = np.median(low_subset)
-median = np.median(li)
-q3 = np.median(high_subset)
+q1 = np.median(low_subset) #this is the 25% (percentile)
+median = np.median(li) # 50% (percentile) or Q2
+q3 = np.median(high_subset) # 75% (percentile)
 max_ = max(li)
-iqr = q3 - q1
+iqr = q3 - q1 # used for calculating oultiers (data points that may mess up the veiwing of the metrics)
 low_fence = q1 - 1.5 * iqr
 high_fence = q3 + 1.5 * iqr
 outliers = [x for x in li if x < low_fence or x > high_fence]
