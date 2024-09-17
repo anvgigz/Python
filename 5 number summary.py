@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 li = [10, 9, 11, 8, 13, 11, 17, 10, 14, 10, 11]
 
@@ -32,6 +33,11 @@ min_, q1, median, q3, max_ = np.percentile(li, [0, 25, 50, 75, 100])
 print(f'min: {min_}, q1: {q1}, median: {median}, q3: {q3}, max: {max_}')
 
 
+
+plt.boxplot(li, vert=False)
+plt.xlabel('Cholesterol Level')
+plt.title('Boxplot of Cholesterol Levels')
+plt.show()
 
 #heres my output
 '''[8, 9, 10, 10, 10, 11, 11, 11, 13, 14, 17]
