@@ -17,11 +17,11 @@ else:
     high_subset = li_sorted[(len(li) //2)+1] #q3 if len is odd
 
 
-min_ = min(li)
+min_ = min(li_sorted)
 q1 = np.median(low_subset) #this is the 25% (percentile)
-median = np.median(li) # 50% (percentile) or Q2
+median = np.median(li_sorted) # 50% (percentile) or Q2
 q3 = np.median(high_subset) # 75% (percentile)
-max_ = max(li)
+max_ = max(li_sorted)
 iqr = q3 - q1 # used for calculating oultiers (data points that may mess up the veiwing of the metrics)
 low_fence = q1 - 1.5 * iqr
 high_fence = q3 + 1.5 * iqr
