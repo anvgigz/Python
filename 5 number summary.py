@@ -23,9 +23,11 @@ max_ = max(li)
 iqr = q3 - q1
 low_fence = q1 - 1.5 * iqr
 high_fence = q3 + 1.5 * iqr
+outliers = [x for x in li if x < low_fence or x > high_fence]
 
 
-print(f'min: {min_}, q1: {q1}, median: {median}, q3: {q3}, max: {max_}, iqr: {iqr}, low_fence: {low_fence}, high_fence: {high_fence}')
+print(f'min: {min_},\t q1: {q1},\t median: {median},\t q3: {q3},\t max: {max_},\t iqr: {iqr},\n low_fence: {low_fence},\t high_fence: {high_fence}')
+print(f"Outliers: {outliers}")
 
 #below I am showing work for using the percent function rather than numpy
 # The below code is explicitly used on the w3school website to calculate percentile --https://www.w3schools.com/python/python_ml_percentile.asp
@@ -43,7 +45,10 @@ max_ = max(li)
 iqr = q3 - q1
 low_fence = q1 - 1.5 * iqr
 high_fence = q3 + 1.5 * iqr
-print(f'min: {min_}, q1: {q1}, median: {median}, q3: {q3}, max: {max_}, iqr: {iqr}, low_fence: {low_fence}, high_fence: {high_fence}')
+outliers = [x for x in li if x < low_fence or x > high_fence]
+
+print(f'min: {min_},\t q1: {q1},\t median: {median},\t q3: {q3},\t max: {max_},\t iqr: {iqr},\n low_fence: {low_fence},\t high_fence: {high_fence}')
+print(f"Outliers: {outliers}")
 
 
 
