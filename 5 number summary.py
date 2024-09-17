@@ -67,7 +67,7 @@ Outliers: [8, 13, 17, 14]'''
 '''the following are incorrect
 q3 should be 13
 iqr should be 3
-low_fence shoulw be .55
+low_fence shoulw be 5.55
 high_fence should be 17.5
 I should have no Outliers
 
