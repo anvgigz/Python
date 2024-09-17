@@ -35,15 +35,15 @@ print(f"Outliers: {outliers}")
 # The below code is explicitly used on the w3school website to calculate percentile --https://www.w3schools.com/python/python_ml_percentile.asp
 print("Next code output\n Using Numpy Percentile function\n")
 
-li = [10, 9, 11, 8, 13, 11, 17, 10, 14, 10, 11]
+# li = [10, 9, 11, 8, 13, 11, 17, 10, 14, 10, 11]
 
 li_sorted = sorted(li)
 
-min_ = min(li)
-q1 = np.percentile(li, 25)
-median = np.percentile(li, 50)
-q3 = np.percentile(li, 75)
-max_ = max(li)
+min_ = min(li_sorted)
+q1 = np.percentile(li_sorted, 25)
+median = np.percentile(li_sorted, 50)
+q3 = np.percentile(li_sorted, 75)
+max_ = max(li_sorted)
 iqr = q3 - q1
 low_fence = q1 - 1.5 * iqr
 high_fence = q3 + 1.5 * iqr
