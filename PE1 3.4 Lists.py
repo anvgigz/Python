@@ -1,24 +1,25 @@
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-steps = []
+steps = [] # empty list ot append steps
 
-for day in days:
+for day in days: # each day in list days will be executed in the while loop
     while True:
         try:
             step_count = int(input(f"How many steps did you take on {day}? "))
             steps.append(step_count)
-            break
+            break # used to move loop to next day
         except ValueError:
             print("Please enter a valid number.")
 
-print("\nSteps recorded for each day:")
-for day, step in zip(days, steps):
-    print(f"{day}: {step} steps")
+print("\nSteps recorded for each day:") # after the while loop completed the code continues here
+for day, step in zip(days, steps): # the zip function is used to pair the days with steps accordingly based on the order the they were input
+    print(f"{day}: {step} steps") #printeed ex - Monday: 2000 steps
 
-total_steps = sum(steps)
-print(f"\nTotal steps taken in the week: {total_steps}")
+total_steps = sum(steps)  # the sum function adds all the steps together usign addition. and puts them into the variable total_steps
+print(f"\nTotal steps taken in the week: {total_steps}") #  # total_steps is printed in an f-string
 
-average_steps = round(total_steps / len(steps))
-print(f"Average steps taken per day: {average_steps}")
+average_steps = round(total_steps / len(steps)) # the total steps is divided by the amount of numbers in steps( which would be 7 based off the while loop of days of the week
+# This number is then rounded using the round function which provides an integer rather than a float
+print(f"Average steps taken per day: {average_steps}") # average per week is printed
 
 
 
