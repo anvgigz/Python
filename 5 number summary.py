@@ -18,7 +18,7 @@ if len(li) % 2 ==0:
     high_subset = li_sorted[len(li) // 2:] #q3 if len is even
 else:
     low_subset = li_sorted[:len(li) //2] #q1 if len is odd
-    high_subset = li_sorted[(len(li) //2)+1] #q3 if len is odd
+    high_subset = li_sorted[(len(li) //2)+1:] #q3 if len is odd
 
 
 min_ = min(li_sorted)
