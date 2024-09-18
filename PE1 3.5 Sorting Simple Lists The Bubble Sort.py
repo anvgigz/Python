@@ -1,5 +1,8 @@
 def creating_a_list():
+    # Initialize an empty list to store names
     names_list = []
+    
+    # Loop to collect 5 names from the user
     while True:
         print("Please provide your name")
         name = input()
@@ -7,11 +10,11 @@ def creating_a_list():
         if len(names_list) == 5:
             break
 
-    # Convert all names to lowercase
+    # Convert all names to lowercase for consistent sorting
     for i in range(len(names_list)):
         names_list[i] = names_list[i].lower()
 
-    # Bubble sort algorithm
+    # Bubble sort algorithm to sort the names in alphabetical order
     swapped = True
     while swapped:
         swapped = False  # Reset the flag at the start of each iteration
@@ -29,8 +32,5 @@ def creating_a_list():
     names_list.reverse()
     print("Reversed list:", names_list)
 
+# Call the function to execute the code
 creating_a_list()
-
-'''print("Final list of names: \n", names_list)
-    print(f"here is the list sorted:\n", sorted(names_list))
-    print("here is the list sorted in reverse:\n", sorted(names_list, reverse=True))'''
