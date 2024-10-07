@@ -9,9 +9,9 @@ def previus_score():
         old_score = int(input())
         score = old_score
         print("Your previus score has been added: ", score)
-    except ValueError:
+    except ValueError: # if the user enters a string instead of a number. function will call itself again
         print("Please enter a number")
         previus_score()
 
-previus_score()
+previus_score() # calls function
 
