@@ -1,14 +1,12 @@
 def creating_a_list():
     # Initialize an empty list to store names
     names_list = []
-    
+
     # Loop to collect 5 names from the user
-    while True:
+    while len(names_list) < 5:
         print("Please provide your name")
         name = input()
         names_list.append(name)
-        if len(names_list) == 5:
-            break
 
     # Convert all names to lowercase for consistent sorting
     for i in range(len(names_list)):
