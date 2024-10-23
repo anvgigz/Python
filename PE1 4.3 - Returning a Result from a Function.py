@@ -1,9 +1,15 @@
-#Assignment: Simple Interest Calculator
-#Objective: Write a Python function named calculate_interest 
-# that computes and returns the simple interest based on given parameters.
+# Function to calculate simple interest
+def calculate_interest(principal, rate_of_interest, time):
+    return (principal * rate_of_interest * time) / 100
 
-def calculate_interest(principle,rate_of_interest,time):
-    simple_interest = (principle * rate_of_interest * time) / 100
-    print(f"The simple interest is {simple_interest}")
+# Main program to get user input and print the result
+def main():
+    principal = float(input("Enter the principal amount: "))
+    rate_of_interest = float(input("Enter the rate of interest: "))
+    time = float(input("Enter the time (in years): "))
+    
+    interest = calculate_interest(principal, rate_of_interest, time)
+    print(f"The simple interest is {interest:.2f}")
 
-calculate_interest(1000, 5, 2)
+# Call the main function to execute the program
+main()
