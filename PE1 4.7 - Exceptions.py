@@ -1,17 +1,13 @@
-#Assignment: Adding Exception Handling
+# Simple Python program to calculate the square of a number
+def square_number():
+    while True:  # Loop until a valid number is entered
+        try:
+            number = input("Enter a number to square: ")
+            squared_number = int(number) ** 2
+            print(f"The square of {number} is {squared_number}.")
+            break  # Exit loop if no errors
+        except ValueError:  # Catch non-numeric input errors
+            print("Please enter a valid number.")
 
-score = 0
-
-def previus_score():
-    global score
-    try:
-        print("input your previus score")
-        old_score = int(input())
-        score = old_score
-        print("Your previus score has been added: ", score)
-    except ValueError: # if the user enters a string instead of a number. function will call itself again
-        print("Please enter a number")
-        previus_score()
-
-previus_score() # calls function
-
+# Call the function
+square_number()
