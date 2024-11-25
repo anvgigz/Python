@@ -7,7 +7,7 @@ def main():
     entry = input("Enter your diary entry: ")
     
     # Define the file path
-    file_path = "C:/Users/me/OneDrive/Desktop/python_work/Python Class/diary.txt"
+    file_path = "diary.txt"
     
     # Check if the diary file exists, if not, create it
     if not os.path.exists(file_path):
